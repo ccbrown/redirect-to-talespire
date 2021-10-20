@@ -25,3 +25,5 @@ Then you can use formulas like this in your cells:
 ```
 =HYPERLINK(DICEURL("d20" & TEXT(AA20+AC20, "+0;-0;0"), "Initiative"), AA20+AC20)
 ```
+
+To get started quickly, you can clone the [sheet here](https://docs.google.com/spreadsheets/d/14cHDNLSUFVO-MO70jnn3N_ESSs6flK8tZBKosK_FHu0/edit?usp=sharing).
