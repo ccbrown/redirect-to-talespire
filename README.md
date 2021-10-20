@@ -5,3 +5,23 @@ This repo has a simple HTML redirect to TaleSpire for the purpose of using [Tale
 Opening up dice.html via a URL like this will redirect to TaleSpire:
 
 > https://ccbrown.github.io/redirect-to-talespire/dice.html#Fireball:2d6
+
+## Google Sheets
+
+The best way to use this in Google Sheets is to create a [custom function](https://developers.google.com/apps-script/guides/sheets/functions) that assembles the URL:
+
+```javascript
+function DICEURL(dice, label) {
+  if (label) {
+    return "https://ccbrown.github.io/redirect-to-talespire/dice.html#" + encodeURIComponent(label) + ":" + dice;
+  } else {
+    return "https://ccbrown.github.io/redirect-to-talespire/dice.html#" + dice;
+  }
+}
+```
+
+Then you can use formulas like this in your cells:
+
+```
+=HYPERLINK(DICEURL("2d6", "Fireball"), "Roll Fireball Damage")
+```
