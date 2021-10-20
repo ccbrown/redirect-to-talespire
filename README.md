@@ -23,5 +23,5 @@ function DICEURL(dice, label) {
 Then you can use formulas like this in your cells:
 
 ```
-=HYPERLINK(DICEURL("2d6", "Fireball"), "Roll Fireball Damage")
+=HYPERLINK(DICEURL("d20" & TEXT(AA20+AC20, "+0;-0;0"), "Initiative"), AA20+AC20)
 ```
